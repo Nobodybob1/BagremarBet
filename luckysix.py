@@ -45,7 +45,17 @@ def drawTable(table):
             sys.stdout.flush()
         print()
 
+odds = {
+    0:25000, 1:15000, 2:7500, 3:3000, 4:1250, 5:700,
+    6:350, 7:250, 8:175, 9:125, 10:100, 11:90,
+    12:80, 13:70, 14:60, 15:50, 16:35, 17:25,
+    18:20, 19:15, 20:12, 21:10, 22:8, 23:7, 
+    24:6, 25:5, 26:4, 27:3, 28:2, 29:1
+    }
+
 ticket = getTicket()
+payment = int(input("Uplatite novac: "))
+
 table = getTable()
 
 guessed = []
@@ -57,8 +67,16 @@ print("Izvučeni brojevi su:")
 drawTable(table)
 
 if guessed:
-    guessed = " ".join(str(x) for x in guessed)
-    print("Pogođeni brojevi su: " + guessed)
+    tmp = " ".join(str(x) for x in guessed)
+    print("Pogođeni brojevi su: " + tmp)
+
+    if (len(guessed) == 6):
+        positions = []
+        for i in guessed:
+            positions.append(table.index(i))
+        
+        #prize = payment * odds[max(positions)-5]
+        print("Osvojili ste " + str(payment * odds[max(positions)-5]) + " dinara.")
 else:
     print("Nemate nijedan pogođen broj")
 
