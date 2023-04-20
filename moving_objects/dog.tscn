@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://p8c7se7f6mmq"]
+
+[ext_resource type="Script" path="res://moving_objects/dog.gd" id="1_3pmmp"]
+[ext_resource type="Texture2D" uid="uid://c3sa5mrspnpke" path="res://Sprite-0001.png" id="1_smsak"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jife0"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cg6m"]
+atlas = ExtResource("1_smsak")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_msm5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cg6m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dog" type="CharacterBody2D"]
+script = ExtResource("1_3pmmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jife0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_msm5i")
