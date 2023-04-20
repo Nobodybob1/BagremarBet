@@ -1959,9 +1959,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^16.8.6 || ^17.0.0":
-  "integrity" "sha512-c1GzVY97P0fGxwGxhYq989j4XwlcHQoto6wQISOC2v6wm3h0PORRWJFHlkRjfGsiG3y1609WdQ+J+tKxvrEd6A=="
-  "resolved" "https://registry.npmjs.org/@types/react/-/react-17.0.58.tgz"
-  "version" "17.0.58"
+  "integrity" "sha512-4yaZZtkRN3ZIQD3KSEwkfcik8s0SWV+82dlJot1AbGYHCzJkWP3ENBY6wYeDRmKZ6HkrgoGAmR2HqdwYGp6OEw=="
+  "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.37.tgz"
+  "version" "18.0.37"
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
