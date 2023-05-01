@@ -2,10 +2,10 @@ import random
 import time
 import sys
 
-print("Dobro došli! Molimo unesite svoju kombinaciju od 6 brojeva između 1 i 48.\n")
 
 #tiket
 def getTicket():
+    print("Molimo unesite svoju kombinaciju od 6 brojeva između 1 i 48.\n")
     ticket = []
     i = 0
     while(i < 6):
@@ -53,30 +53,44 @@ odds = {
     24:6, 25:5, 26:4, 27:3, 28:2, 29:1
     }
 
-ticket = getTicket()
-payment = int(input("Uplatite novac: "))
+n = int(input("Dobro došli! Unesite broj željenih kombinacija: "))
+tickets = []
+
+#promeni u for petlju
+while (n > 0):
+    tickets.append(getTicket())
+    n -= 1
+
+for i in range(len(tickets)):
+    payments = []
+    payments.append(int(input("Uplatite novac za " + str(i+1) + ". tiket: ")))
 
 table = getTable()
 
-guessed = []
-for number in ticket:
-    if (number in table):
-        guessed.append(number)
+guessed_ticket = []
+for i in range(len(tickets)):
+    guessed_ticket.append([])
+
+for ticket in tickets:
+    for number in ticket:
+        if (number in table):
+            guessed_ticket[tickets.index(ticket)].append(number)
 
 print("Izvučeni brojevi su:")
 drawTable(table)
+#test
+for guessed in guessed_ticket:
+    if guessed:
+        tmp = " ".join(str(x) for x in guessed)
+        print("Pogođeni brojevi tiketa " + str(guessed_ticket.index(guessed) + 1) + " su: " + str(tmp))
 
-if guessed:
-    tmp = " ".join(str(x) for x in guessed)
-    print("Pogođeni brojevi su: " + tmp)
-
-    if (len(guessed) == 6):
-        positions = []
-        for i in guessed:
-            positions.append(table.index(i))
-        
-        #prize = payment * odds[max(positions)-5]
-        print("Osvojili ste " + str(payment * odds[max(positions)-5]) + " dinara.")
-else:
-    print("Nemate nijedan pogođen broj")
+        if (len(guessed) == 6):
+            positions = []
+            for i in guessed:
+                positions.append(table.index(i))
+            
+            #prize = payment * odds[max(positions)-5]
+            print("Osvojili ste " + str(payments[guessed_ticket.index(guessed)] * odds[max(positions)-5]) + " dinara na tiketu " + str(guessed_ticket.index(guessed) + 1))
+    else:
+        print("Nemate nijedan pogođen broj na tiketu " + str(guessed_ticket.index(guessed) + 1))
 
