@@ -1,8 +1,22 @@
-import Home from "./home/Home";
-import './app.scss'
+import "./app.scss";
+import Home from "./pages/home/Home";
+import Register from "./pages/register/Register";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// import "./register.scss";
 
 const App = () => {
-  return <div><Home /></div>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+      </Routes>
+    </BrowserRouter>
+
+    //<div className="App">
+    // <Register />
+    //</div>
+  );
 };
 
 export default App;
