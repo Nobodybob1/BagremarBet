@@ -1,43 +1,22 @@
 .list {
   width: 100%;
-  margin-top: 10px;
+  height: 600px;
+  background-color: #262626;
+  padding-top: 40px;
 
   .listTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 50px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Blinker;
+    margin-bottom: 40px;
   }
 
-  .wrapper {
-    position: relative;
-    .sliderArrow {
-      width: 50px;
-      height: 100%;
-      background-color: rgb(23, 23, 23, 0.5);
-      color: white;
-      position: absolute;
-      z-index: 99;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      cursor: pointer;
-
-      &.left {
-        left: 0;
-      }
-      &.right {
-        right: 0px;
-      }
-    }
-
-    .container {
-      margin-left: 50px;
-      margin-top: 10px;
-      display: flex;
-      width: max-content;
-      transform: translateX(0px);
-      transition: all 1s ease;
-    }
+  .container {
+    display: flex;
+    justify-content: center;
   }
 }

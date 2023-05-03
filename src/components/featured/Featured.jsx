@@ -5,14 +5,16 @@ import main from "../featured/main.jpg";
 function Featured() {
   return (
     <div className="featured">
-       <img className="main" src= {main} alt="" />
+      <img className="main" src={main} alt="" />
       <div className="info">
         <img src="https://tinyurl.com/bagremar" alt="logo" />
         <span className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          doloribus magnam culpa deserunt, quod et, consequuntur odio in eveniet
-          aliquam consectetur perspiciatis distinctio non? Doloribus maiores
-          laborum sed error sapiente.
+          Bagremar Bet je mesto gde se susreću strastveni ljubitelji sporta i
+          klađenja. Sa širokim izborom sportskih događaja i kvotama, naša
+          kladionica nudi nezaboravno iskustvo i uzbuđenje za sve koji su
+          spremni da se pridruže akciji. Naša brza i jednostavna platforma za
+          klađenje omogućava igračima da se brzo i lako kladite na svoje
+          omiljene brojeve i kerove.
         </span>
         <div className="buttons">
           <button className="play">

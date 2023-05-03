@@ -9,8 +9,7 @@
   transition: 1.5s;
 
   &.scrolled {
-  
-    background-color: rgb(23, 21, 21);
+    background-color: rgb(26, 26, 26);
     transition: 1.5s;
   }
 
@@ -37,6 +36,17 @@
       span {
         margin-right: 20px;
         cursor: pointer;
+        padding: 7px 16px 7px 16px;
+        border: 1px solid rgba(26, 26, 26, 0);
+      }
+
+      span:hover {
+        background-color: white;
+        border: 1px solid rgba(26, 26, 26, 0);
+        border-radius: 30px;
+        color: rgb(26, 26, 26);
+        padding: 7px 16px 7px 16px;
+        transition: all 0.35s ease;
       }
     }
 
@@ -45,54 +55,68 @@
       align-items: center;
       font-size: 16px;
       font-weight: bold;
-     
 
       .registerbtn {
-        border: 1px solid #AB0C0C;
+        border: 1px solid #ab0c0c;
         border-radius: 30px;
         padding: 5px 16px 5px 16px;
-        background-color: #AB0C0C;
+        background-color: #ab0c0c;
         font-weight: bold;
         color: white;
         cursor: pointer;
-
+        transition: all 0.35s ease;
       }
 
-      
+      .registerbtn:hover {
+        background-color: white;
+        color: #ab0c0c;
+        border: 1px solid white;
+      }
+
       .loginbtn {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 7px 16px 7px 16px;
+        border: 1px solid #ab0c0c00;
         cursor: pointer;
+        margin-left: 15px;
+        transition: all 0.35s ease;
+      }
+
+      .loginbtn:hover {
+        background-color: white;
+        border: 1px solid rgba(26, 26, 26, 0);
+        border-radius: 30px;
+        color: rgb(26, 26, 26);
+        padding: 7px 16px 7px 16px;
+        margin-left: 15px;
       }
 
       .icon {
-        margin: 0px 30px;
+        margin: 0px 20px;
         cursor: pointer;
       }
       .icons {
-        margin: 0px 30px;
         cursor: pointer;
         margin-right: 5px;
       }
-
-      img {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-        object-fit: cover;
-        cursor: pointer;
+      span {
+        margin-right: 15px;
       }
 
       .profile {
         .options {
           display: none;
-          background-color: var(--main-color);
+          background-color: white;
           border-radius: 5px;
+          color: rgba(26, 26, 26);
         }
 
         span {
           padding: 10px;
           cursor: pointer;
+        }
+
+        .icon {
+          padding-top: 8px;
         }
 
         &:hover {
