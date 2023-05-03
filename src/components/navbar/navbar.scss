@@ -6,9 +6,12 @@
   top: 0;
   z-index: 999;
   background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  transition: 1.5s;
 
   &.scrolled {
-    background-color: var(--main-color);
+  
+    background-color: rgb(23, 21, 21);
+    transition: 1.5s;
   }
 
   .container {
@@ -21,10 +24,14 @@
     .left {
       display: flex;
       align-items: center;
+      font-size: 16px;
+      font-weight: bold;
 
       img {
-        height: 35px;
+        height: 50px;
         margin-right: 40px;
+        padding-left: 50px;
+        cursor: pointer;
       }
 
       span {
@@ -36,7 +43,27 @@
     .right {
       display: flex;
       align-items: center;
-      margin-right: 80px;
+      font-size: 16px;
+      font-weight: bold;
+     
+
+      .registerbtn {
+        border: 1px solid #AB0C0C;
+        border-radius: 30px;
+        padding: 5px 16px 5px 16px;
+        background-color: #AB0C0C;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+
+      }
+
+      
+      .loginbtn {
+        padding-left: 50px;
+        padding-right: 50px;
+        cursor: pointer;
+      }
 
       .icon {
         margin: 0px 30px;
@@ -73,7 +100,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: 107px;
+            right: 1%;
           }
         }
       }

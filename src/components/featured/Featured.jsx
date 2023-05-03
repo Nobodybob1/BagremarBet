@@ -1,10 +1,11 @@
 import { InfoOutlined, PlayArrowOutlined } from "@material-ui/icons";
 import "./featured.scss";
+import main from "../featured/main.jpg";
 
 function Featured() {
   return (
     <div className="featured">
-      <img src="https://i.ytimg.com/vi/JbT1zyVz13Q/maxresdefault.jpg" alt="" />
+       <img className="main" src= {main} alt="" />
       <div className="info">
         <img src="https://tinyurl.com/bagremar" alt="logo" />
         <span className="desc">

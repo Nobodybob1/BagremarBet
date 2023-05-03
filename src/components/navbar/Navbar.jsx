@@ -32,11 +32,9 @@ const Navbar = () => {
       <div className="container">
         <div className="left">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
-            alt="react"
+               src="https://cdn.discordapp.com/attachments/1095343493142032498/1103333609634549851/logo-mali2.png"
+               alt="react"
           />
-          <span>Homepage</span>
-          <span>Games</span>
           <span>Dogs</span>
           <span>Lucky 6</span>
         </div>
@@ -58,8 +56,8 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="right">
-            <div className="loginBtn">LOGIN</div>
-            <div className="registerBtn" onClick={handleRegister}>
+            <div className="loginbtn">LOGIN</div>
+            <div className="registerbtn" onClick={handleRegister}>
               REGISTER
             </div>
           </div>
