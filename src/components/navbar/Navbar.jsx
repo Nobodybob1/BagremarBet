@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         {storageUser !== null ? (
           <div className="right">
-            <MonetizationOn className="icon" />
+            <MonetizationOn className="icons" />
             <div>12345</div>
             <Notifications className="icon" />
             <div className="profile">
