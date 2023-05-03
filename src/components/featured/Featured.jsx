@@ -1,4 +1,4 @@
-import { InfoOutlined, PlayArrow } from "@material-ui/icons";
+import { InfoOutlined, PlayArrowOutlined } from "@material-ui/icons";
 import "./featured.scss";
 
 function Featured() {
@@ -15,7 +15,7 @@ function Featured() {
         </span>
         <div className="buttons">
           <button className="play">
-            <PlayArrow />
+            <PlayArrowOutlined className="icon" />
             <span>Play</span>
           </button>
           <button className="more">
