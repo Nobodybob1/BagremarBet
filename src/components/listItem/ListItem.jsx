@@ -9,8 +9,8 @@ function ListItem({ name, game, image }) {
       </div>
       <div className="itemInfo">
         <div className="rules">
-          <span className="game">GAME</span>
-          <span className="limit">+18</span>
+          <span className="game">IGRA</span>
+          <span className="limit">18+</span>
         </div>
         <div className="items">
           <div className="name">{name}</div>
@@ -18,7 +18,7 @@ function ListItem({ name, game, image }) {
         <div className="desc">{game}</div>
         <button className="play">
           <PlayArrowOutlined className="icon" />
-          <span>Play</span>
+          <span>Igraj</span>
         </button>
       </div>
     </div>

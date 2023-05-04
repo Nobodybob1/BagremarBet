@@ -12,6 +12,9 @@
     background-size: cover;
     background-image: url(https://media.discordapp.net/attachments/1095343493142032498/1103358298503249991/180-ultimate-guide-lottery.jpg);
     border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     .image-overlay {
       width: 100%;
@@ -28,6 +31,9 @@
     background-size: cover;
     background-image: url(https://media.discordapp.net/attachments/1095343493142032498/1103356815820996648/b8450d1570.jpeg);
     border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     .image-overlay {
       width: 100%;
@@ -44,6 +50,9 @@
     background-size: cover;
     background-image: url(https://media.discordapp.net/attachments/1095343493142032498/1103362075503370473/dilerka.png?width=1202&height=676);
     border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     .image-overlay {
       width: 100%;
@@ -61,6 +70,9 @@
     padding-right: 15px;
     background-color: #eaebeb;
     border-radius: 0px 0px 15px 15px;
+    -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     .rules {
       display: flex;
@@ -71,10 +83,11 @@
       }
 
       .limit {
-        color: gray;
-        border: 1px solid #ab0c0c;
-        padding: 2px;
-        border-radius: 10px;
+        color: black;
+        border: 3px solid #ab0c0c;
+        padding: 3px;
+        border-radius: 16px;
+        font-weight: 600;
       }
     }
 

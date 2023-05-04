@@ -38,12 +38,12 @@
         cursor: pointer;
         padding: 7px 16px 7px 16px;
         border: 1px solid rgba(26, 26, 26, 0);
+        border-radius: 30px;
       }
 
       span:hover {
         background-color: white;
         border: 1px solid rgba(26, 26, 26, 0);
-        border-radius: 30px;
         color: rgb(26, 26, 26);
         padding: 7px 16px 7px 16px;
         transition: all 0.35s ease;
@@ -79,12 +79,13 @@
         cursor: pointer;
         margin-left: 15px;
         transition: all 0.35s ease;
+        border-radius: 30px;
       }
 
       .loginbtn:hover {
         background-color: white;
         border: 1px solid rgba(26, 26, 26, 0);
-        border-radius: 30px;
+
         color: rgb(26, 26, 26);
         padding: 7px 16px 7px 16px;
         margin-left: 15px;

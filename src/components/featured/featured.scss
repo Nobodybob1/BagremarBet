@@ -41,7 +41,8 @@
     .buttons {
       display: flex;
 
-      button {
+      .play,
+      .more {
         padding: 10px 20px;
         border: none;
         border-radius: 50px;
@@ -84,4 +85,24 @@
       }
     }
   }
+}
+
+.exit {
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: 2px solid #ab0c0c;
+  color: white;
+  background-color: #ab0c0c;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Blinker;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.exit:hover {
+  background-color: white;
+  color: #ab0c0c;
 }
