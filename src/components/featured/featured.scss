@@ -2,16 +2,25 @@
   height: 90vh;
   position: relative;
 
-  img {
+  .main {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    opacity: 0.8;
+    background-position: center;
+    background-size: cover;
+    background-image: url(main.jpg);
+    border-radius: 15px 15px 0px 0px;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .image-overlay {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(234, 235, 235, 0.208);
+    }
   }
 
-  .main {
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 0.5;
-  }
   .info {
     width: 35%;
     position: absolute;
@@ -26,6 +35,7 @@
 
     .desc {
       margin: 20px 0px;
+      text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.25);
     }
 
     .buttons {
@@ -39,7 +49,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font: 600;
         font-size: 18px;
         font-weight: 500;
         cursor: pointer;

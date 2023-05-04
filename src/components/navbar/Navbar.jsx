@@ -31,6 +31,10 @@ const Navbar = () => {
     navigate("/register");
   };
 
+  const handleLogin = () => {
+    navigate("/login");
+  };
+
   return (
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="container">
@@ -39,8 +43,17 @@ const Navbar = () => {
             src="https://cdn.discordapp.com/attachments/1095343493142032498/1103333609634549851/logo-mali2.png"
             alt="react"
           />
-          <span>Dogs</span>
-          <span>Lucky 6</span>
+          {storageUser !== null ? (
+            <>
+              <span>Dogs</span>
+              <span>Lucky 6</span>
+            </>
+          ) : (
+            <>
+              <span onClick={handleLogin}>Dogs</span>
+              <span onClick={handleLogin}>Lucky 6</span>
+            </>
+          )}
         </div>
         {storageUser !== null ? (
           <div className="right">
@@ -60,7 +73,9 @@ const Navbar = () => {
             <div className="registerbtn" onClick={handleRegister}>
               REGISTER
             </div>
-            <div className="loginbtn">LOGIN</div>
+            <div className="loginbtn" onClick={handleLogin}>
+              LOGIN
+            </div>
           </div>
         )}
       </div>

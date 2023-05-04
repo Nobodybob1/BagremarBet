@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * > * {
-  font-family: "Poppins", cursive;
+  font-family: "Blinker", cursive;
   margin: 0;
 }
 
@@ -9,14 +9,14 @@ body {
   background: #0b0b0b;
 }
 
-.registerPage {
+.loginPage {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  .register {
+  .loginPageBox {
     max-width: 978px;
     width: 400px;
     display: flex;
@@ -52,7 +52,7 @@ body {
         cursor: pointer;
       }
 
-      .login {
+      .account {
         display: flex;
         font-size: 17px;
         justify-content: space-between;
@@ -86,12 +86,12 @@ body {
   }
 }
 
-.register .col-1 {
+.loginPageBox .col-1 {
   margin: auto;
   padding: 3em 0;
 }
 
-.register .col-2 img {
+.loginPageBox .col-2 img {
   width: 480px;
   height: 100%;
   object-fit: cover;
@@ -102,7 +102,7 @@ body {
 }
 
 @media screen and (min-width: 860px) {
-  .register .col-2 img {
+  .loginPageBox .col-2 img {
     display: initial;
   }
 }
