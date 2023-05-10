@@ -18,7 +18,7 @@ function List() {
         />
         <ListItem
           name="Uskoro"
-          game="Priprema se i nova zanimljiva igra koja će vam se sigurno svideti. Njen izlazak bi trebalo da se desi veoma uskoro."
+          game="Priprema se i nova zanimljiva igra koja će vam se sigurno dopasti. Njen izlazak bi trebalo da se desi u što kraćem vremenskom periodu."
           image="slika3"
         />
       </div>
