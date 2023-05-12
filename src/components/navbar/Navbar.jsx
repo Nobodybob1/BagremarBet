@@ -4,14 +4,23 @@ import {
   Notifications,
 } from "@material-ui/icons";
 import "./navbar.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Navbar = () => {
-  const storageUser = localStorage.getItem("test");
+  const storageUser = localStorage.getItem("userId");
   console.log(storageUser);
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [balance, setBalance] = useState("-");
+
+  useEffect(async () => {
+    const res = await axios.get(
+      `http://localhost:3005/api/balance?userId=${storageUser}`
+    );
+    setBalance(res.data.balance);
+  }, [balance]);
 
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
@@ -30,9 +39,14 @@ const Navbar = () => {
   const handleRegister = () => {
     navigate("/register");
   };
-
   const handleLogin = () => {
     navigate("/login");
+  };
+  const handleHomepage = () => {
+    navigate("/");
+  };
+  const handleLucky6 = () => {
+    navigate("/lucky6");
   };
 
   return (
@@ -42,11 +56,12 @@ const Navbar = () => {
           <img
             src="https://cdn.discordapp.com/attachments/1095343493142032498/1103333609634549851/logo-mali2.png"
             alt="react"
+            onClick={handleHomepage}
           />
           {storageUser !== null ? (
             <>
               <span>Dogs</span>
-              <span>Lucky 6</span>
+              <span onClick={handleLucky6}>Lucky 6</span>
             </>
           ) : (
             <>
@@ -58,7 +73,7 @@ const Navbar = () => {
         {storageUser !== null ? (
           <div className="right">
             <MonetizationOn className="icons" />
-            <span>12345</span>
+            <span>{balance}</span>
             <Notifications className="icon" />
             <div className="profile">
               <AccountCircle className="icon" />

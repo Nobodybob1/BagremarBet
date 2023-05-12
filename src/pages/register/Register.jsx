@@ -87,24 +87,12 @@ const Register = () => {
                 })}
                 placeholder="Unesite Vasu Lozinku Ponovo"
               />
-              <label>
-                Email Adresa <span>*</span>
-              </label>
-              <input
-                type="text"
-                {...register("email", {
-                  required: true,
-                  pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                })}
-                placeholder="Unesite Vasu Email Adresu"
-              />
               {errors.username?.type === "required" && (
                 <p>Username is required</p>
               )}
               {errors.password?.type === "required" && (
                 <p>Password is required</p>
               )}
-              {errors.email?.type === "required" && <p>Email is required</p>}
               {errors.password?.message && <p>{errors.password?.message}</p>}
               {errors.username?.message && <p>{errors.username?.message}</p>}
               {watch("password") !== watch("confirmpwd") && (

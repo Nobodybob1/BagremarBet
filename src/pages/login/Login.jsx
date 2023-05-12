@@ -15,7 +15,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    localStorage.setItem("test", "test");
+    localStorage.setItem("userId", "2");
     navigate("/");
   };
   // console.log(watch("username"));

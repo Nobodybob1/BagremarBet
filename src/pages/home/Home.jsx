@@ -11,7 +11,7 @@ const Home = () => {
       <Featured />
       <List />
       <div className="footer">
-        <Copyright />
+        <Copyright className="icon" />
         BagremarBet 2023
       </div>
     </div>
