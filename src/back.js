@@ -5,11 +5,8 @@ const express = require("express");
 const db = new sqlite3.Database("bagremarBetDB.db");
 const app = express();
 const port = 3005;
+var test = {};
 app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 app.get("/api/balance", (req, res) => {
   db.get(
@@ -27,20 +24,27 @@ app.get("/api/balance", (req, res) => {
   );
 });
 
-// app.post("/api/send_balance", (req, res) => {
-//   const userId = req.body.data.balance;
-//   console.log(`Received balance request for user ${userId}`);
-//   db;
-// });
-
-app.post("/api/send_balance", (req, res) => {
-  db.run("UPDATE users SET balance = ? WHERE id = ?", [50, 1], (err) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-    } else {
-      res.sendStatus(200);
+app.get("/api/send_balance", (req, res) => {
+  console.log(`Received balance request with value: ${req.query.balance}`);
+  db.run(
+    "UPDATE users SET balance = ? WHERE id = ?",
+    [req.query.balance, 1],
+    (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.sendStatus(200);
+      }
     }
-  });
+  );
+});
+
+app.get("/api/get_user_id", (req, res) => {
+  res.json({ user_id: test });
+});
+
+app.get("/api/store_user_id", (req, res) => {
+  test = req.query.userId;
 });
 
 app.listen(port, () => {

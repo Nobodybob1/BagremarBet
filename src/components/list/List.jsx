@@ -10,11 +10,13 @@ function List() {
           name="Lucky 6"
           game="Tiket je dobitan ukoliko igrač POGODI SVIH 6 brojeva. Kvota zavisi od toga koja je po redu izvučena ŠESTA kuglica sa odabranim brojem."
           image="slika1"
+          path="/lucky6"
         />
         <ListItem
           name="Trke Pasa"
           game="Tiket je dobitan ukoliko igrač POGODI POBEDNIKA TRKE. Kvota zavisi od toga koji je pas po redu u tabeli po šansi. Bolji pas => manja kvota."
           image="slika2"
+          path="/dogs"
         />
         <ListItem
           name="Uskoro"

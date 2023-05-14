@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Navbar from "../../components/navbar/Navbar";
-import "./lucky6.scss";
+import "./dogs.scss";
 
-function Lucky6() {
+function Dogs() {
   useEffect(() => {
     const navbar = document.querySelector(".navbar");
     if (navbar) {
@@ -16,7 +16,7 @@ function Lucky6() {
     };
   }, []);
   return (
-    <div className="lucky6">
+    <div className="dogs">
       <Navbar />
       <div className="gameContainer">
         <iframe
@@ -34,14 +34,16 @@ function Lucky6() {
             <div className="image-overlay"></div>
           </div>
           <div className="desc">
-            <div className="gameName">Lucky6</div>
+            <div className="gameName">Dogs</div>
             <div className="gameText">
-              Dobrodošli u Lucky 6 igru! Cilj je pogoditi svih 6 brojeva na
-              tiketu kako biste osvojili. Kvota zavisi od rednog broja šeste
-              izvučene kuglice s odabranim brojem. Što kasnije broj bude
-              izvučen, to je veća kvota. Ova igra kombinuje sreću i strategiju.
-              Spremite se za uzbuđenje i osvojite fantastične nagrade. Uživajte
-              u igri, budite hrabri i neka sreća bude na vašoj strani!
+              Trka pasa je uzbudljivo takmičenje pasa na posebno dizajniranim
+              stazama. Kladioničari biraju svoje favorite i klađenjem pokušavaju
+              predvideti rezultate trke. Kvota zavisi od samog psa i njegovih
+              kvaliteta. Što je veća šansa za pobedu, to je manja kvota. Ova
+              igra kombinuje sreću i strategiju za osvajanje fantastičnih
+              nagrada. Trka pasa nudi uzbudljivo iskustvo s klađenjem i
+              takmičenjem. Uživajte u uzbuđenju i pridružite se trci pasa za
+              sreću i sjajne dobitke!
             </div>
           </div>
         </div>
@@ -50,4 +52,4 @@ function Lucky6() {
   );
 }
 
-export default Lucky6;
+export default Dogs;

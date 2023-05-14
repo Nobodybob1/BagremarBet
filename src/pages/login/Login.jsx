@@ -4,6 +4,7 @@ import "./login.scss";
 import { Navigate, useNavigate } from "react-router-dom";
 import SideImage from "../../components/sideImage/SideImage";
 import { ArrowBack } from "@material-ui/icons";
+import axios from "axios";
 
 const Login = () => {
   const {
@@ -14,8 +15,12 @@ const Login = () => {
   } = useForm();
 
   const navigate = useNavigate();
-  const onSubmit = (data) => {
-    localStorage.setItem("userId", "2");
+  const onSubmit = async (data) => {
+    localStorage.setItem("userId", "1");
+    const num = 1;
+    const res = axios.get(
+      `http://localhost:3005/api/store_user_id?userId=${num}`
+    );
     navigate("/");
   };
   // console.log(watch("username"));

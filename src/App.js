@@ -1,5 +1,6 @@
 import "./app.scss";
 import Lucky6 from "./pages/game1/Lucky6";
+import Dogs from "./pages/game2/Dogs";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/lucky6" element={<Lucky6 />}></Route>
+        <Route path="/dogs" element={<Dogs />}></Route>
       </Routes>
     </BrowserRouter>
   );

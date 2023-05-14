@@ -1,7 +1,11 @@
 import { PlayArrowOutlined } from "@material-ui/icons";
 import "./listitem.scss";
+import { useNavigate } from "react-router-dom";
 
-function ListItem({ name, game, image }) {
+function ListItem({ name, game, image, path }) {
+  const storageUser = localStorage.getItem("userId");
+  const navigate = useNavigate();
+
   return (
     <div className="listItem">
       <div className={image}>
@@ -18,7 +22,11 @@ function ListItem({ name, game, image }) {
         <div className="desc">{game}</div>
         <button className="play">
           <PlayArrowOutlined className="icon" />
-          <span>Igraj</span>
+          {storageUser !== null ? (
+            <span onClick={() => navigate(path)}>Igraj</span>
+          ) : (
+            <span onClick={() => navigate("/login")}>Igraj</span>
+          )}
         </button>
       </div>
     </div>

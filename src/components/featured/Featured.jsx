@@ -26,7 +26,7 @@ function Featured() {
       klađenja. Sa širokim izborom sportskih događaja i kvotama, naša kladionica
       nudi nezaboravno iskustvo i uzbuđenje za sve koji su spremni da se
       pridruže akciji. Naša brza i jednostavna platforma za klađenje omogućava
-      igračima da se brzo i lako kladite na svoje omiljene brojeve i kerove.
+      igračima da se brzo i lako klade na svoje omiljene brojeve i kerove.
     </Modal>
   );
 
@@ -43,8 +43,6 @@ function Featured() {
           kladionica nudi nezaboravno iskustvo i uzbuđenje za sve koji su
           spremni da se pridruže akciji. Naša brza i jednostavna platforma za
           klađenje...{" "}
-          {/* omogućava igračima da se brzo i lako kladite na svoje
-          omiljene brojeve i kerove. */}
         </span>
         <div className="buttons">
           <button className="play">
