@@ -21,8 +21,8 @@ function Dogs() {
       <div className="gameContainer">
         <iframe
           frameborder="0"
-          src="https://itch.io/embed-upload/7897057?color=333333"
-          allowfullscreen=""
+          src="https://itch.io/embed-upload/7924719?color=333333"
+          // allowfullscreen=""
           width="1000"
           height="520"
           className="game"

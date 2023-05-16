@@ -4,6 +4,7 @@ import "./register.scss";
 import { Navigate, useNavigate } from "react-router-dom";
 import SideImage from "../../components/sideImage/SideImage";
 import { ArrowBack } from "@material-ui/icons";
+import axios from "axios";
 
 const Register = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -18,7 +19,13 @@ const Register = () => {
   const onSubmit = async (data) => {
     // setErrorMessage("");
     if (watch("password") === watch("confirmpwd")) {
-      localStorage.setItem("test", "test");
+      // console.log(watch().username);
+      const res = await axios.get(
+        `http://localhost:3005/api/create_user?username=${
+          watch().username
+        }&email=${watch().email}&password=${watch().password}&balance=0`
+      );
+      console.log(res);
       navigate("/");
     } else {
       setErrorMessage("yes");
@@ -87,12 +94,24 @@ const Register = () => {
                 })}
                 placeholder="Unesite Vasu Lozinku Ponovo"
               />
+              <label>
+                Email Adresa <span>*</span>
+              </label>
+              <input
+                type="text"
+                {...register("email", {
+                  required: true,
+                  pattern: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                })}
+                placeholder="Unesite Vasu Email Adresu"
+              />
               {errors.username?.type === "required" && (
                 <p>Username is required</p>
               )}
               {errors.password?.type === "required" && (
                 <p>Password is required</p>
               )}
+              {errors.email?.type === "required" && <p>Email is required</p>}
               {errors.password?.message && <p>{errors.password?.message}</p>}
               {errors.username?.message && <p>{errors.username?.message}</p>}
               {watch("password") !== watch("confirmpwd") && (
@@ -111,7 +130,12 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <SideImage register={"REGISTRACIJA"} />
+      <SideImage
+        register={"REGISTRACIJA"}
+        imageLink={
+          "https://i.pinimg.com/564x/ef/29/c5/ef29c5a07c1f8384c476c04f79fe7904.jpg"
+        }
+      />
     </section>
   );
 };

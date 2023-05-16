@@ -16,12 +16,18 @@ const Login = () => {
 
   const navigate = useNavigate();
   const onSubmit = async (data) => {
-    localStorage.setItem("userId", "1");
-    const num = 1;
-    const res = axios.get(
-      `http://localhost:3005/api/store_user_id?userId=${num}`
-    );
-    navigate("/");
+    try {
+      const res1 = await axios.get(
+        `http://localhost:3005/api/get_user_by_credentials?username=${
+          watch().username
+        }&password=${watch().password}`
+      );
+      console.log(res1);
+      localStorage.setItem("userId", res1.data.id);
+      navigate("/");
+    } catch {
+      console.log(`wrong credentials`);
+    }
   };
   // console.log(watch("username"));
 
@@ -74,7 +80,12 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <SideImage register={"ULOGUJTE SE"} />
+      <SideImage
+        register={"ULOGUJTE SE"}
+        imageLink={
+          "https://i1.wp.com/hechingerreport.org/wp-content/uploads/2018/04/Jennifer-Heller-Buckley-PHOTO1.jpg?ssl=1"
+        }
+      />
     </section>
   );
 };

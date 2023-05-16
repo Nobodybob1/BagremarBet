@@ -24,11 +24,49 @@ app.get("/api/balance", (req, res) => {
   );
 });
 
+app.get("/api/get_user_by_credentials", (req, res) => {
+  db.get(
+    "SELECT id FROM users WHERE username = ? AND password = ?",
+    [req.query.username, req.query.password],
+    (err, row) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else if (!row) {
+        res.status(404).json({ error: "User not found" });
+      } else {
+        res.json({ id: row.ID });
+        test = req.query.ID;
+        console.log(req.query.ID);
+      }
+    }
+  );
+});
+
 app.get("/api/send_balance", (req, res) => {
   console.log(`Received balance request with value: ${req.query.balance}`);
   db.run(
     "UPDATE users SET balance = ? WHERE id = ?",
-    [req.query.balance, 1],
+    [req.query.balance, test],
+    (err) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.sendStatus(200);
+      }
+    }
+  );
+});
+
+app.get("/api/create_user", (req, res) => {
+  console.log(`Received balance request with value: ${req.query.balance}`);
+  db.run(
+    "INSERT INTO users (USERNAME, EMAIL, PASSWORD, balance) VALUES (?, ?, ?, ?)",
+    [
+      req.query.username,
+      req.query.email,
+      req.query.password,
+      req.query.balance,
+    ],
     (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
