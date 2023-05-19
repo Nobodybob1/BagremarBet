@@ -96,6 +96,10 @@
       }
       .bell {
         color: #ab0c0c;
+        pointer-events: auto !important;
+      }
+      .notification {
+        pointer-events: none;
       }
 
       .icons {

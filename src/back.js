@@ -35,8 +35,8 @@ app.get("/api/get_user_by_credentials", (req, res) => {
         res.status(404).json({ error: "User not found" });
       } else {
         res.json({ id: row.ID });
-        test = req.query.ID;
-        console.log(req.query.ID);
+        test = row.ID;
+        console.log(row.ID);
       }
     }
   );

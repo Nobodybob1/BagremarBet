@@ -55,24 +55,32 @@ const Navbar = () => {
         );
         if (res.data.balance !== refBalance.current && balance !== "-") {
           handleNewNotifications();
+          let result = refBalance.current - res.data.balance;
+          console.log(result);
+          let msg = "";
+          if (result > 0) {
+            msg = `Vas GUBITAK iznosi: ${result}`;
+          } else {
+            result = -result;
+            msg = `Vas DOBITAK iznosi: ${result}`;
+          }
           setBalance(res.data.balance);
           if (refNotifications.current.length === 5) {
+            // Vas GUBITAK iznosi:
+            // Vas DOBITAK iznosi:
             setNotifications([
               refNotifications.current[1],
               refNotifications.current[2],
               refNotifications.current[3],
               refNotifications.current[4],
-              `balance: ${refBalance.current}->${res.data.balance}`,
+              msg,
             ]);
           } else {
-            setNotifications([
-              ...refNotifications.current,
-              `balance: ${refBalance.current}->${res.data.balance}`,
-            ]);
+            setNotifications([...refNotifications.current, msg]);
           }
         }
       }
-    }, 1000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [balance]);
 

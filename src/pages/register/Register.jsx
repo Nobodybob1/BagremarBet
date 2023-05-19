@@ -26,7 +26,7 @@ const Register = () => {
         }&email=${watch().email}&password=${watch().password}&balance=0`
       );
       console.log(res);
-      navigate("/");
+      navigate("/login");
     } else {
       setErrorMessage("yes");
       console.log(errorMessage);
