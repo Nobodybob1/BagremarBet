@@ -193,7 +193,7 @@ const Navbar = () => {
             <div className="profile">
               <AccountCircle className="icon" />
               <div className="options">
-                <span>Profil</span>
+                <span onClick={() => navigate("/info")}>Profil</span>
                 <span onClick={handleLogout}>Izloguj se</span>
               </div>
             </div>

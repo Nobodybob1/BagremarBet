@@ -74,7 +74,7 @@ const Register = () => {
                 Lozinka <span>*</span>
               </label>
               <input
-                type="text"
+                type="password"
                 {...register("password", {
                   required: true,
                   minLength: {
@@ -88,7 +88,7 @@ const Register = () => {
                 Ponovite Lozinku <span>*</span>
               </label>
               <input
-                type="text"
+                type="password"
                 {...register("confirmpwd", {
                   required: true,
                 })}

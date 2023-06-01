@@ -2,6 +2,7 @@ import { InfoOutlined, PlayArrowOutlined } from "@material-ui/icons";
 import "./featured.scss";
 import { useState } from "react";
 import Modal from "../modal/Modal";
+import { useNavigate } from "react-router-dom";
 
 function Featured() {
   const [showModal, setShowModal] = useState(false);
@@ -13,6 +14,7 @@ function Featured() {
   const handleClose = () => {
     setShowModal(false);
   };
+  const navigate = useNavigate();
 
   const actionBar = (
     <button className="exit" onClick={handleClose}>
@@ -47,7 +49,7 @@ function Featured() {
         <div className="buttons">
           <button className="play">
             <PlayArrowOutlined className="icon" />
-            <span>Igraj</span>
+            <span onClick={() => navigate("/addGame")}>Igraj</span>
           </button>
           <button className="more" onClick={handleClick}>
             <InfoOutlined />

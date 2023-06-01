@@ -65,7 +65,7 @@ const Login = () => {
                 Lozinka <span> *</span>
               </label>
               <input
-                type="text"
+                type="password"
                 {...register("password")}
                 placeholder="Unesite Vasu Lozinku"
               />
