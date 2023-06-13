@@ -1,0 +1,22 @@
+.list {
+  width: 100%;
+  height: 600px;
+  background-color: #262626;
+  padding-top: 40px;
+
+  .listTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: Blinker;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
